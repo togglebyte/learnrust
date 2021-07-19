@@ -1,0 +1,42 @@
+use std::mem::size_of_val;
+
+fn use_slice(bytes: &[u8]) {
+    eprintln!("{:#?}| len: {}", bytes, bytes.len());
+}
+
+fn accept_conections() {
+    let mut connections = Vec::new();
+    let mut next_connection_id: u32 = 0;
+
+    // Loop and accept new connections
+    // let connection = server.accept();
+    connections.push(next_connection_id);
+    next_connection_id += 1;
+}
+
+fn main() {
+
+
+    // let mut x = 1;
+
+    // x = x + 1;
+    // x += 1;
+
+
+
+    let mut vec: Vec<u8> = vec![0u8; 1024 * 1024 * 900];
+    // let arr: [u8; 3] = [1, 2, 3];
+
+    // let borrow_array: &[u8; 3] = &arr;
+    // let borrow_vec: &Vec<u8> = &vec;
+
+    // vec.push(123);
+
+    // use_slice(&arr);
+    // use_slice(&vec);
+
+    let mut slice: &[u8] = &vec;
+
+    eprintln!("{:?}", size_of_val(&slice));
+    // slice = &vec;
+}

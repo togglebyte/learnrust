@@ -1,0 +1,7 @@
+fn main() {
+    // Owned
+    let my_string: String = String::new(); // Wrapper around Vec<u8>
+
+    // Borrow
+    let s: &str = get_str();
+}
